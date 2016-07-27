@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD5F7FD51D4807A300DCD658 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5F7FD41D4807A300DCD658 /* APIManager.swift */; };
 		ADA41B241D47A6D7006EDCFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA41B231D47A6D7006EDCFF /* AppDelegate.swift */; };
 		ADA41B261D47A6D7006EDCFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA41B251D47A6D7006EDCFF /* ViewController.swift */; };
 		ADA41B291D47A6D7006EDCFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADA41B271D47A6D7006EDCFF /* Main.storyboard */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD5F7FD41D4807A300DCD658 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		AD8913701D47DB2C008A9B93 /* MusicVideo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MusicVideo.entitlements; sourceTree = "<group>"; };
 		ADA41B201D47A6D7006EDCFF /* MusicVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA41B231D47A6D7006EDCFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADA41B251D47A6D7006EDCFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +77,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD5F7FD01D47EC8200DCD658 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AD5F7FD41D4807A300DCD658 /* APIManager.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		AD5F7FD11D47EC9300DCD658 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ADA41B251D47A6D7006EDCFF /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		AD5F7FD21D47ECAC00DCD658 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ADA41B2C1D47A6D7006EDCFF /* LaunchScreen.storyboard */,
+				ADA41B271D47A6D7006EDCFF /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		AD5F7FD31D47ECCE00DCD658 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ADA41B231D47A6D7006EDCFF /* AppDelegate.swift */,
+				ADA41B2A1D47A6D7006EDCFF /* Assets.xcassets */,
+				ADA41B2F1D47A6D7006EDCFF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		ADA41B171D47A6D7006EDCFF = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +135,11 @@
 		ADA41B221D47A6D7006EDCFF /* MusicVideo */ = {
 			isa = PBXGroup;
 			children = (
-				ADA41B231D47A6D7006EDCFF /* AppDelegate.swift */,
-				ADA41B251D47A6D7006EDCFF /* ViewController.swift */,
-				ADA41B271D47A6D7006EDCFF /* Main.storyboard */,
-				ADA41B2A1D47A6D7006EDCFF /* Assets.xcassets */,
-				ADA41B2C1D47A6D7006EDCFF /* LaunchScreen.storyboard */,
-				ADA41B2F1D47A6D7006EDCFF /* Info.plist */,
+				AD5F7FD31D47ECCE00DCD658 /* Supporting Files */,
+				AD5F7FD01D47EC8200DCD658 /* Model */,
+				AD8913701D47DB2C008A9B93 /* MusicVideo.entitlements */,
+				AD5F7FD11D47EC9300DCD658 /* Controller */,
+				AD5F7FD21D47ECAC00DCD658 /* View */,
 			);
 			path = MusicVideo;
 			sourceTree = "<group>";
@@ -193,6 +230,15 @@
 				TargetAttributes = {
 					ADA41B1F1D47A6D7006EDCFF = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 4SKP58MDH5;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+							com.apple.WAC = {
+								enabled = 0;
+							};
+						};
 					};
 					ADA41B331D47A6D7006EDCFF = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -256,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD5F7FD51D4807A300DCD658 /* APIManager.swift in Sources */,
 				ADA41B261D47A6D7006EDCFF /* ViewController.swift in Sources */,
 				ADA41B241D47A6D7006EDCFF /* AppDelegate.swift in Sources */,
 			);
@@ -401,10 +448,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MusicVideo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kodetrix.MusicVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -412,10 +462,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MusicVideo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kodetrix.MusicVideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -484,6 +537,7 @@
 				ADA41B4A1D47A6D7006EDCFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ADA41B4B1D47A6D7006EDCFF /* Build configuration list for PBXNativeTarget "MusicVideoTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +546,7 @@
 				ADA41B4D1D47A6D7006EDCFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ADA41B4E1D47A6D7006EDCFF /* Build configuration list for PBXNativeTarget "MusicVideoUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +555,7 @@
 				ADA41B501D47A6D7006EDCFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
