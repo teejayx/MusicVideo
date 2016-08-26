@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
     var videos = [Videos]()
@@ -28,6 +29,8 @@ class ViewController: UIViewController {
     }
     
     func didLoadData(videos: [Videos]){
+        
+        print(reachbilityStatus)
         self.videos = videos
         
         for item in videos{
